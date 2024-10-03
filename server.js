@@ -29,18 +29,18 @@ db.connect((err) => {
 
 
 // Question 1 goes here
-// app.get('/patients', (req, res) => {
+app.get('/patients', (req, res) => {
 
-//     // Retrieve data from database 
-//     const getPatients = "SELECT patient_id, first_name, last_name, date_of_birth FROM patients"
-//     db.query(getPatients, (err, data) =>{
-//         if (err) {
-//            return res.status(400).send('Error Retrieving data', err)
-//         }
-//             //Display the records to the browser 
-//             res.status(200).send(data);   
-//     });
-// });
+    // Retrieve data from database 
+    const getPatients = "SELECT patient_id, first_name, last_name, date_of_birth FROM patients"
+    db.query(getPatients, (err, data) =>{
+        if (err) {
+           return res.status(400).send('Error Retrieving data', err)
+        }
+            //Display the records to the browser 
+            res.status(200).send(data);   
+    });
+});
 
 // Question 2 goes here
 app.get('/providers', (req, res) => {
